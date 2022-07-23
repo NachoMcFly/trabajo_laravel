@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Request\ProductRequest;
 
 class ProductController extends Controller
 {
@@ -29,12 +30,12 @@ class ProductController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(request $request)
     {
-        //
+        dd($request);
     }
 
     /**
