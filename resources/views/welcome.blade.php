@@ -15,11 +15,11 @@
             <div class="row">
                 <div class="jumbotron">
                     <div class="row">
-                        <div class="col-3">
-                            <img src="logoNoExistente.jpeg" width="220" height="210">
+                        <div class="col-4">
+                            <img src="https://ciisa.cl/wp-content/uploads/2018/01/Logo-Ciisa-Sitio.png" width="300" height="180">
                         </div>
-                        <div class="col-9"><br>
-                            <h1 class="display-4"><b>trabajo Framework y programacion web</b></h1>
+                        <div class="col-8"><br>
+                            <h1 class="display-4"><b>Trabajo de Framework y Programacion Web</b></h1>
                         </div>
                         <div class="col-12" align="center" >
                             <p class="lead">Formulario para EVA1</p>
@@ -27,7 +27,9 @@
                         </div>
                         <div>
                             <p>AAAAND it's gone.</p>
-                            <a class="btn btn-primary" href="https://www.southpark.lat/news/zi5uql/aannnd-it-s-gone" role="button">se va</a>
+                            <a class="btn btn-primary" href="https://www.southpark.lat/news/zi5uql/aannnd-it-s-gone" role="button">se va</a><br><br>
+                            <a class="btn btn-danger" href="https://github.com/NachoMcFly/trabajo_laravel" role="button">Repositorio</a><br><br>
+                            <a class="btn btn-success" href="{{route('products.create')}}" type="button">Formulario</a>
                         </div>
                     </div>
                 </div>
@@ -55,7 +57,7 @@
 
             ·        Actualizar nombre, precio y descripción del producto. <br>
 
-            ·        Crear un login para administrador del sistema. <br>
+            ·        Crear un login para administrador del sistema. <br><br>
 
  
 
@@ -69,15 +71,16 @@
 
                 <div class='col-12'><br><br>
 
-                    aqui se podria poner alguna accion :
+                    Integrantes :
                     <select class="form-control col-6" id="selector_ahorro">
-                        <option selected value="nada">opcion que no existen aun si</option>
-                        <option value="products.create">pal Create</option>
-                        <option value="renovable">pal View</option>
+                        <option selected value="prof">Profesor: Victor Cofre</option>
+                        <option value="sujeto1">Gerardo Martinez</option>
+                        <option value="sujeto2">Luis Rojas</option>
+                        <option value="sujeto3">Ignacio Moraga</option>
                     </select>
 
                     <br><br>
-                    <a class="btn btn-success" href="{{route('products.create')}}" type="button">create</a>
+                    
 
                 </div>
             </div>
