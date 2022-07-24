@@ -14,7 +14,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        //
+        return view("contact");
     }
 
     /**
@@ -27,6 +27,7 @@ class ProductController extends Controller
         return view("createproduct");
     }
 
+ 
     /**
      * Store a newly created resource in storage.
      *

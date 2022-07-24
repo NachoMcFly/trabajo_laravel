@@ -11,83 +11,63 @@
         <title>PHP <3</title>
     </head>
     <body>
-        <div class="container">
+        <div class="container" >
             <div class="row">
-                <div class="jumbotron">
                     <div class="row">
                         <div class="col-4">
-                            <img src="https://ciisa.cl/wp-content/uploads/2018/01/Logo-Ciisa-Sitio.png" width="300" height="180">
+                        <button type="button" class="btn btn-dark">login</button>
                         </div>
-                        <div class="col-8"><br>
-                            <h1 class="display-4"><b>Trabajo de Framework y Programacion Web</b></h1>
-                        </div>
-                        <div class="col-12" align="center" >
-                            <p class="lead">Formulario para EVA1</p>
-                            <hr class="my-4">
-                        </div>
-                        <div>
-                            <p>AAAAND it's gone.</p>
-                            <a class="btn btn-primary" href="https://www.southpark.lat/news/zi5uql/aannnd-it-s-gone" role="button">se va</a><br><br>
-                            <a class="btn btn-danger" href="https://github.com/NachoMcFly/trabajo_laravel" role="button">Repositorio</a><br><br>
-                            <a class="btn btn-success" href="{{route('products.create')}}" type="button">Formulario</a>
+                        <button type="button" class="btn btn-light" href="{{route('products.index')}}">Contactanos</button>
+                        <div class="col-12" aling="center"><br>
+                            <h1 class="display-4"><b>Carrito de compras</b></h1>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
+               </div>
+          </div>
+          <p>
+            <hr>
+             <p>
+
+ <div class="row">
+             <div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Patines Seba</h5>
+    <p class="card-text">Catalogados como la mejor marca de patines profesionales.</p>
+    <a class="btn btn-success" href="{{route('products.create')}}" type="button">Comprar</a>
+  </div>
+</div>
 
 
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
 
-                Instrucciones:<br>
-
-​               Diseñar un software gestión de stock. <br>
-
-
-            ·        Registrar un producto con los siguientes datos, id auto incrementable, código único del producto, 
-            nombre del producto, categoría, sucursal en la que se encuentra, y descripción, cantidad, y precio venta. <br>
-
-            ·        Asignar productos a sucursal. (Defina 3 sucursales.) <br>
-
-            ·        Consultar productos por código, nombre, y opcionalmente la sucursal. <br>
-
-            ·        Dar de baja un producto. (Con la opción de eliminar el producto). <br>
-
-            ·        Actualizar nombre, precio y descripción del producto. <br>
-
-            ·        Crear un login para administrador del sistema. <br><br>
-
- 
-
-            Se solicita:<br>
-
-            ·        Diseñe un estilo visual o utilice una plantilla Bootstrap que se ajuste a los requerimientos. <br>
-
-            ·        Valide los campos obligatorios de las vistas y envíelos a una clase PHP la cual mostrará los datos por pantalla. <br>
-
-                </div> 
-
-                <div class='col-12'><br><br>
-
-                    Integrantes :
-                    <select class="form-control col-6" id="selector_ahorro">
-                        <option selected value="prof">Profesor: Victor Cofre</option>
-                        <option value="sujeto1">Gerardo Martinez</option>
-                        <option value="sujeto2">Luis Rojas</option>
-                        <option value="sujeto3">Ignacio Moraga</option>
-                    </select>
-
-                    <br><br>
-                    
-
-                </div>
-            </div>
-        </div>
-        <br><br><br>
+<div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Patines hook</h5>
+    <p class="card-text">Patins semi profesionales, ideales para aprender.</p>
+    <a class="btn btn-success" href="{{route('products.create')}}" type="button">Comprar</a>
+  </div>
+</div>
 
 
+
+<div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Flying Eagle</h5>
+    <p class="card-text">Patines profesionales pre rockeables.</p>
+    <a class="btn btn-success" href="{{route('products.create')}}" type="button">Comprar</a>
+  </div>
+</div>
+
+</div>
+
+
+
+
+        
+                            
+        
 
 
         <!-- Optional JavaScript; choose one of the two! -->
