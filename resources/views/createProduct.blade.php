@@ -9,30 +9,30 @@
   </head>
   <body>
     <div class="container">
-    <h1>Formulario de productos</h1>
+    <h1>Confirmación de compra </h1>
     <form action="{{route('products.store')}}" method="post">
     @csrf
         <div class="form-row">
             <div class="col-md-6 mb-3">
                 <input
-                    type="text"
+                    type="number"
                     class="form-control is-valid"
                     id="Nombre"
                     name="nombre"
                     value=""
-                    placeholder="Nombre de producto"
+                    placeholder="Numero de tarjeta"
                     required/>
                  
                 <div class="valid-feedback"></div>
             </div>
                 <div class="col-md-6 mb-3">
                  <input
-                    type="text"
+                    type="number"
                     name="color"
                     class="form-control is-valid"
                     id="Color"
                     value=""
-                    placeholder="Color de producto"
+                    placeholder="Cantidad de productos"
                     required/>
                   
                   <div class="valid-feedback"></div>
@@ -46,7 +46,7 @@
                     id="cantidad"
                     name="cantidad"
                     value=""
-                    placeholder="Cantidad de productos"
+                    placeholder="Dirección"
                     required/>
                   
                   <div class="valid-feedback"></div>
@@ -76,9 +76,9 @@
                 </div>
               </div>
            <br>
-              <button class="btn btn-primary" type="submit">Enviar</button>          
+              <button class="btn btn-primary" type="submit">Confirmar</button>          
             </form><br>
-            <a class="btn btn-success" href="/" type="button">Inicio</a>
+            <a class="btn btn-success" href="/" type="button">Volver a inicio</a>
 </div>   
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>

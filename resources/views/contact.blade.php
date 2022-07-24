@@ -49,7 +49,7 @@
                 </div>
             </div>
         </div>
-        <a href="index.html"> <button type="button" class="btn btn-warning">Volver a inicio</button></a>
+        <a class="btn btn-success" href="/" type="button">Inicio</a>
     </div>
 </body>
 </html>
