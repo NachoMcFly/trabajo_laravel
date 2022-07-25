@@ -35,7 +35,7 @@
   <div class="card-body">
     <h5 class="card-title">Patines Seba</h5>
     <p class="card-text">Catalogados como la mejor marca de patines profesionales.</p>
-    <a class="btn btn-success" href="{{route('products.create')}}" type="button">Comprar</a>
+    <a class="btn btn-success" href="/viewsProduct" type="button">vistas</a>
   </div>
 </div>
 
