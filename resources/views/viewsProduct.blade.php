@@ -10,7 +10,6 @@
   <body>
     <div class="container">
     <h1>Vista de Productos </h1>
-    <form action="{{route('products.store')}}" method="post">
     @csrf
         <div class="form-row">
             <div class="col-md-6 mb-3">
@@ -76,8 +75,7 @@
                 </div>
               </div>
            <br>
-              <button class="btn btn-primary" type="submit">Confirmar</button>          
-            </form><br>
+           <a class="btn btn-success" href="{{route('products.create')}}" type="button">Agregar Producto</a>          
             <a class="btn btn-success" href="/" type="button">Volver a inicio</a>
 </div>   
 
