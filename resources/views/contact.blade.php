@@ -11,7 +11,7 @@
 
    
 
-    <title>Anime Town TV</title>
+    
 </head>
 
 <body background="hunterx.jpg">

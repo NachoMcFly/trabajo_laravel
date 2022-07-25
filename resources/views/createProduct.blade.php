@@ -18,7 +18,7 @@
                     type="number"
                     class="form-control is-valid"
                     id="Nombre"
-                    name="nombre"
+                    name="tarjeta"
                     value=""
                     placeholder="Numero de tarjeta"
                     required/>
@@ -28,9 +28,9 @@
                 <div class="col-md-6 mb-3">
                  <input
                     type="number"
-                    name="color"
+                    name="cantidad"
                     class="form-control is-valid"
-                    id="Color"
+                    id="cantidad"
                     value=""
                     placeholder="Cantidad de productos"
                     required/>
@@ -41,10 +41,10 @@
               <div class="form-row">
                 <div class="col-md-6 mb-3">
                   <input
-                    type="number"
+                    type="text"
                     class="form-control is-valid"
-                    id="cantidad"
-                    name="cantidad"
+                    id="direccion"
+                    name="direccion"
                     value=""
                     placeholder="Dirección"
                     required/>
