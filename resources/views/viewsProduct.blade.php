@@ -15,37 +15,58 @@
       
       <h1>Vista de Productos </h1>
         @csrf
-        
-          <div class="mb-3">
+        <div class="row">
+          <div class="col-2" align="center">
             <label for="gameName" class="form-label">Nombre Producto</label>
             
           </div>
-          <div class="mb-3">
+          <div class="col-2" align="center">
             <label for="platform" class="form-label">Categoria</label>
 
           </div>
-          <div class="mb-3">
+          <div class="col-2" align="center">
             <label for="developer" class="form-label">Sucursal(es)</label>
             
           </div>
-          <div class="mb-3">
+          <div class="col-1" align="center">
             <label for="price" class="form-label">Stock</label>
             
           </div> 
 
-          <div class="mb-3">
+          <div class="col-1" align="center">
             <label for="price" class="form-label">Precio$</label>
             
           </div>
-
-          <div class="mb-3">
-            <label for="price" class="form-label">Precio$</label>
-            
-          </div>
+   
+        </div>
           
+        <div class="row">
+          <div class="col-2" align="center">
+            <label for="gameName" class="form-label">Ejemplo</label>
+            
+          </div>
+          <div class="col-2" align="center">
+            <label for="platform" class="form-label">Repuesto</label>
+
+          </div>
+          <div class="col-2" align="center">
+            <label for="developer" class="form-label">Puente_Alto</label>
+            
+          </div>
+          <div class="col-1" align="center">
+            <label for="price" class="form-label">Stock</label>
+            
+          </div> 
+
+          <div class="col-1" align="center">
+            <label for="price" class="form-label">Precio$</label>
+            
+          </div>
+   
+        </div>
         <br>
           <a class="btn btn-primary" href="{{route('products.create')}}" type="button">Agregar Producto</a><br><br>         
-          <a class="btn btn-success" href="/" type="button">Volver a inicio</a><br>
+          <a class="btn btn-secondary" href="/" type="button">Volver a Inicio</a><br>
     </div>   
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>

@@ -12,21 +12,22 @@
     </head>
     <body>
         <div class="container" >
-            <div class="row">
-                    <div class="row">
-                        <div class="col-4">
-                        <button type="button" class="btn btn-dark">login</button>
-                        </div>
-                        <a type="button" class="btn btn-light" href="{{route('products.index')}}">Contactanos</a>
-                        <div class="col-12" aling="center"><br>
-                            <h1 class="display-4"><b>Carrito de compras</b></h1>
-                        </div>
-                    </div>
-               </div>
-          </div>
-          <p>
-            <hr>
-             <p>
+          <div class="row">
+              <div class="row">
+                  <div class="col-4">
+                    <button type="button" class="btn btn-dark">login</button>
+                  </div>
+                  <div class="col-4" align="center">
+                    <a type="button" class="btn btn-info" href="{{route('products.index')}}">Contactanos</a>
+                  </div>    
+                  <div class="col-12" aling="center"><br>
+                    <h1 class="display-4"><b>Sistema de Inventario Patines</b></h1>
+                  </div>
+                </div>
+            </div>
+
+          <a class="btn btn-primary" href="{{route('products.create')}}" type="button">Agregar Producto</a>
+          <a class="btn btn-success" href="/viewsProduct" type="button">Vista Inventario</a><br><br>
 
  <div class="row">
   <div class="card" style="width: 18rem;">
@@ -35,7 +36,7 @@
   <div class="card-body">
     <h5 class="card-title">Patines Seba</h5>
     <p class="card-text">Catalogados como la mejor marca de patines profesionales.</p>
-    <a class="btn btn-success" href="/viewsProduct" type="button">vistas</a>
+    
   </div>
 </div>
 
@@ -47,7 +48,7 @@
   <div class="card-body">
     <h5 class="card-title">Patines hook</h5>
     <p class="card-text">Patins semi profesionales, ideales para aprender.</p>
-    <a class="btn btn-success" href="{{route('products.create')}}" type="button">Comprar</a>
+    
   </div>
 </div>
 
@@ -59,10 +60,10 @@
   <div class="card-body">
     <h5 class="card-title">Flying Eagle</h5>
     <p class="card-text">Patines profesionales pre rockeables.</p>
-    <a class="btn btn-success" href="{{route('products.create')}}" type="button">Comprar</a>
   </div>
 </div>
 
+</div>
 </div>
 
 
