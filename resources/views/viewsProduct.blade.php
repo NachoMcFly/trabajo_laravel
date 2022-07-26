@@ -34,7 +34,12 @@
           </div> 
 
           <div class="mb-3">
-            <label for="price" class="form-label">Precio</label>
+            <label for="price" class="form-label">Precio$</label>
+            
+          </div>
+
+          <div class="mb-3">
+            <label for="price" class="form-label">Precio$</label>
             
           </div>
           
