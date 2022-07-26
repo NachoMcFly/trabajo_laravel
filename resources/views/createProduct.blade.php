@@ -15,63 +15,34 @@
         <div class="form-row">
             <div class="col-md-6 mb-3">
                 <input
-                    type="number"
-                    class="form-control is-valid"
-                    id="Nombre"
-                    name="tarjeta"
-                    value=""
-                    placeholder="Numero de tarjeta"
-                    required/>
-                 
-                <div class="valid-feedback"></div>
-            </div>
-                <div class="col-md-6 mb-3">
-                 <input
-                    type="number"
-                    name="cantidad"
-                    class="form-control is-valid"
-                    id="cantidad"
-                    value=""
-                    placeholder="Cantidad de productos"
-                    required/>
-                  
-                  <div class="valid-feedback"></div>
-                </div>
-              </div>
-              <div class="form-row">
-                <div class="col-md-6 mb-3">
-                  <input
                     type="text"
                     class="form-control is-valid"
-                    id="direccion"
-                    name="direccion"
+                    id="nombre"
+                    name="nombre"
                     value=""
-                    placeholder="Dirección"
+                    placeholder="Nombre de producto"
                     required/>
-                  
-                  <div class="valid-feedback"></div>
-                </div>
-                <div class="col-md-6 mb-3">
-                  <input
-                    type="number"
-                    class="form-control is-valid"
-                    id="telefono"
-                    name="telefono"
-                    value=""
-                    placeholder="Telefono de contacto: +569"
-                    required/>
+                 
+                    <div class='col-12'><br>
 
-                    <div class="valid-feedback"></div>
-               </div>
-                  <div class="col-md-6 mb-3">
-                  <input
-                    type="email"
-                    class="form-control is-valid"
-                    id="correo"
-                    name="correo"
-                    value=""
-                    placeholder="Correo electronico"
-                    required/>
+
+        <select class="form-row" name="categoria" placeholder="Categoria">
+           <option selected value="prof">Categoria</option>
+            <option value="sujeto1">patines</option>
+             <option value="sujeto2">seguridad</option>
+               <option value="sujeto3">herramienta</option>
+                </select>
+
+                <div class='col-12'><br>
+                  
+                <select class="form-row" name="sucursal" placeholder="Sucursal">
+           <option selected value="prof">Sucursal</option>
+            <option value="sujeto1">puente alto</option>
+             <option value="sujeto2">la florida</option>
+               <option value="sujeto3">ñuñoa</option>
+                </select>
+                  
+          
 
                 </div>
               </div>
