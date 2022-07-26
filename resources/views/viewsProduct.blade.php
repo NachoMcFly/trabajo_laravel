@@ -1,83 +1,47 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="resources/css/style.css">
-    <title>Bootstrap demo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-  </head>
-  <body>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+        <title>PHP views<3</title>
+    </head>
+    <body>
     <div class="container">
-    <h1>Vista de Productos </h1>
-    @csrf
-        <div class="form-row">
-            <div class="col-md-6 mb-3">
-                <input
-                    type="number"
-                    class="form-control is-valid"
-                    id="Nombre"
-                    name="tarjeta"
-                    value=""
-                    placeholder="Numero de tarjeta"
-                    required/>
-                 
-                <div class="valid-feedback"></div>
-            </div>
-                <div class="col-md-6 mb-3">
-                 <input
-                    type="number"
-                    name="cantidad"
-                    class="form-control is-valid"
-                    id="cantidad"
-                    value=""
-                    placeholder="Cantidad de productos"
-                    required/>
-                  
-                  <div class="valid-feedback"></div>
-                </div>
-              </div>
-              <div class="form-row">
-                <div class="col-md-6 mb-3">
-                  <input
-                    type="text"
-                    class="form-control is-valid"
-                    id="direccion"
-                    name="direccion"
-                    value=""
-                    placeholder="Dirección"
-                    required/>
-                  
-                  <div class="valid-feedback"></div>
-                </div>
-                <div class="col-md-6 mb-3">
-                  <input
-                    type="number"
-                    class="form-control is-valid"
-                    id="telefono"
-                    name="telefono"
-                    value=""
-                    placeholder="Telefono de contacto: +569"
-                    required/>
+      
+      <h1>Vista de Productos </h1>
+        @csrf
+        
+          <div class="mb-3">
+            <label for="gameName" class="form-label">Nombre Producto</label>
+            
+          </div>
+          <div class="mb-3">
+            <label for="platform" class="form-label">Categoria</label>
 
-                    <div class="valid-feedback"></div>
-               </div>
-                  <div class="col-md-6 mb-3">
-                  <input
-                    type="email"
-                    class="form-control is-valid"
-                    id="correo"
-                    name="correo"
-                    value=""
-                    placeholder="Correo electronico"
-                    required/>
+          </div>
+          <div class="mb-3">
+            <label for="developer" class="form-label">Sucursal(es)</label>
+            
+          </div>
+          <div class="mb-3">
+            <label for="price" class="form-label">Stock</label>
+            
+          </div> 
 
-                </div>
-              </div>
-           <br>
-           <a class="btn btn-success" href="{{route('products.create')}}" type="button">Agregar Producto</a>          
-            <a class="btn btn-success" href="/" type="button">Volver a inicio</a>
-</div>   
+          <div class="mb-3">
+            <label for="price" class="form-label">Precio</label>
+            
+          </div>
+          
+        <br>
+          <a class="btn btn-primary" href="{{route('products.create')}}" type="button">Agregar Producto</a><br><br>         
+          <a class="btn btn-success" href="/" type="button">Volver a inicio</a><br>
+    </div>   
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
  </body>
