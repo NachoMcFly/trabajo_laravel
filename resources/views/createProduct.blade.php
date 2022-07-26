@@ -9,7 +9,7 @@
   </head>
   <body>
     <div class="container">
-    <h1>Confirmación de compra </h1>
+    <h1> Agregar producto a inventario </h1>
     <form action="{{route('products.store')}}" method="post">
     @csrf
         <div class="form-row">
@@ -47,7 +47,7 @@
                 </div>
               </div>
            <br>
-              <button class="btn btn-primary" type="submit">Confirmar</button>          
+              <button class="btn btn-primary" type="submit">Guardar</button>          
             </form><br>
             <a class="btn btn-success" href="/" type="button">Volver a inicio</a>
 </div>   
