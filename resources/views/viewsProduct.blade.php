@@ -16,6 +16,7 @@
       <h1>Vista de Productos </h1>
         @csrf
         <div class="row">
+          
           <div class="col-2" align="center">
             <label for="gameName" class="form-label">Nombre Producto</label>
             
@@ -46,7 +47,7 @@
             
           </div>
           <div class="col-2" align="center">
-            <label for="platform" class="form-label">Repuesto</label>
+            <label for="platform" class="form-label">Herramienta</label>
 
           </div>
           <div class="col-2" align="center">
@@ -54,12 +55,12 @@
             
           </div>
           <div class="col-1" align="center">
-            <label for="price" class="form-label">Stock</label>
+            <label for="price" class="form-label">8</label>
             
           </div> 
 
           <div class="col-1" align="center">
-            <label for="price" class="form-label">Precio$</label>
+            <label for="price" class="form-label">$888</label>
             
           </div>
    
