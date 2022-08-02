@@ -1,12 +1,15 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="resources/css/style.css">
-    <title>Bootstrap demo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-  </head>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+        <title>PHP <3</title>
+    </head>
   <body>
     <div class="container">
     <h1> Agregar producto a inventario </h1>
@@ -21,34 +24,46 @@
                     name="nombre"
                     value=""
                     placeholder="Nombre de producto"
-                    required/>
-                 
-                    <div class='col-12'><br>
+                    required/><br>
 
-
-        <select class="form-row" name="categoria" placeholder="Categoria">
-           <option selected value="prof">Categoria</option>
-            <option value="sujeto1">patines</option>
-             <option value="sujeto2">seguridad</option>
-               <option value="sujeto3">herramienta</option>
-                </select>
-
-                <div class='col-12'><br>
+                <select class="form-row" name="categoria" placeholder="Categoria">
+                  <option selected value="prof">Categoria</option>
+                    <option value="sujeto1">Patines</option>
+                    <option value="sujeto2">Repuestos</option>
+                    <option value="sujeto2">Seguridad</option>
+                    <option value="sujeto3">Herramientas</option>
+                </select><br><br>
                   
-                <select class="form-row" name="sucursal" placeholder="Sucursal">
-           <option selected value="prof">Sucursal</option>
-            <option value="sujeto1">puente alto</option>
-             <option value="sujeto2">la florida</option>
-               <option value="sujeto3">ñuñoa</option>
-                </select>
+                  <select class="form-row" name="sucursal" placeholder="Sucursal">
+                    <option selected value="prof">Sucursal</option>
+                      <option value="sujeto1">puente alto</option>
+                      <option value="sujeto2">la florida</option>
+                      <option value="sujeto3">ñuñoa</option>
+                  </select><br><br>
                   
+         <input
+                    type="number"
+                    class="form-control is-valid"
+                    id="Precio"
+                    name="Precio"
+                    value=""
+                    placeholder="Precio del Producto ($)"
+                    required/><br>
           
+        <input
+                    type="number"
+                    class="form-control is-valid"
+                    id="Stock"
+                    name="Stock"
+                    value=""
+                    placeholder="Stock"
+                    required/>
 
                 </div>
               </div>
            <br>
               <button class="btn btn-primary" type="submit">Guardar</button>          
-            </form><br><br>
+            </form><br>
             <a class="btn btn-secondary" href="/" type="button">Volver a Inicio</a><br>
 </div>   
 
