@@ -1,16 +1,7 @@
-<!doctype html>
-<html lang="en">
-    <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+@extends('layouts.master')
 
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+@section('content')
 
-        <title>PHP <3</title>
-    </head>
-  <body>
     <div class="container">
     <h1> Agregar producto a inventario </h1>
     <form action="{{route('products.store')}}" method="post">
@@ -64,9 +55,6 @@
            <br>
               <button class="btn btn-primary" type="submit">Guardar</button>          
             </form><br>
-            <a class="btn btn-secondary" href="/" type="button">Volver a Inicio</a><br>
 </div>   
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
- </body>
-</html>
+@stop
