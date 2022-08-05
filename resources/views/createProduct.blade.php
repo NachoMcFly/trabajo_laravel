@@ -11,32 +11,32 @@
                 <input
                     type="text"
                     class="form-control is-valid"
-                    id="nombre"
-                    name="nombre"
+                    id="nombrePro"
+                    name="nombrePro"
                     value=""
                     placeholder="Nombre de producto"
                     required/><br>
 
                 <select class="form-row" name="categoria" placeholder="Categoria">
-                  <option selected value="prof">Categoria</option>
-                    <option value="sujeto1">Patines</option>
-                    <option value="sujeto2">Repuestos</option>
-                    <option value="sujeto2">Seguridad</option>
-                    <option value="sujeto3">Herramientas</option>
+                  <option selected value="categoria">Categoria</option>
+                    <option value="patines">Patines</option>
+                    <option value="repuestos">Repuestos</option>
+                    <option value="seguridad">Seguridad</option>
+                    <option value="herramientas">Herramientas</option>
                 </select><br><br>
                   
                   <select class="form-row" name="sucursal" placeholder="Sucursal">
-                    <option selected value="prof">Sucursal</option>
-                      <option value="sujeto1">puente alto</option>
-                      <option value="sujeto2">la florida</option>
-                      <option value="sujeto3">ñuñoa</option>
+                    <option selected value="sucursal">Sucursal</option>
+                      <option value="puenteAlto">Puente Alto</option>
+                      <option value="laFlorida">La Florida</option>
+                      <option value="nunoa">Ñuñoa</option>
                   </select><br><br>
                   
          <input
                     type="number"
                     class="form-control is-valid"
-                    id="Precio"
-                    name="Precio"
+                    id="precioPro"
+                    name="precioPro"
                     value=""
                     placeholder="Precio del Producto ($)"
                     required/><br>
@@ -44,8 +44,8 @@
         <input
                     type="number"
                     class="form-control is-valid"
-                    id="Stock"
-                    name="Stock"
+                    id="stockPro"
+                    name="stockPro"
                     value=""
                     placeholder="Stock"
                     required/>
