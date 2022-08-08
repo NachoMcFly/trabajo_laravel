@@ -12,7 +12,7 @@
                     type="text"
                     class="form-control is-valid"
                     id="nombrePro"
-                    name="nombrePro"
+                    name="nombreProducto"
                     value=""
                     placeholder="Nombre de producto"
                     required/><br>
@@ -35,8 +35,8 @@
          <input
                     type="number"
                     class="form-control is-valid"
-                    id="precioPro"
-                    name="precioPro"
+                    id="preciopro"
+                    name="precio"
                     value=""
                     placeholder="Precio del Producto ($)"
                     required/><br>
@@ -45,7 +45,7 @@
                     type="number"
                     class="form-control is-valid"
                     id="stockPro"
-                    name="stockPro"
+                    name="stock"
                     value=""
                     placeholder="Stock"
                     required/>
@@ -53,6 +53,16 @@
                 </div>
               </div>
            <br>
+
+           @if($errors->any())
+           <div class="alert alert-danger">
+            <ul> 
+              @foreach($errors->all() as $error)
+              <li>{{ $error }}</li>
+              @endforeach
+            </ul>
+            </div>
+            @endif
               <button class="btn btn-primary" type="submit">Guardar</button>          
             </form><br>
 </div>   
