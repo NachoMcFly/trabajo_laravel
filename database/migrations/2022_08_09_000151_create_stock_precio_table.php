@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCategoriasTables extends Migration
+class CreateStockPrecioTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,12 @@ class CreateCategoriasTables extends Migration
      */
     public function up()
     {
-        Schema::create('categoria', function (Blueprint $table) {
+        Schema::create('stock_precio', function (Blueprint $table) {
             $table->id();
-            $table->string('tipo', 20);
+            $table->integer('stock');
+            $table->integer('precio');
+            $table->foreignId('producto_id')->references('id')->on('producto');
+            $table->foreignId('sucursal_id')->references('id')->on('sucursal');
             $table->timestamps();
         });
     }
@@ -27,6 +30,6 @@ class CreateCategoriasTables extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('categorias');
+        Schema::dropIfExists('stock_precio');
     }
 }
