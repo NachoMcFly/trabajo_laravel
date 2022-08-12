@@ -16,8 +16,10 @@ class ProductController extends Controller
     public function index()
     {
         $producto = Producto::get();
-        dd($producto);
-        return view('viewsProduct');
+        
+        return view('viewsProduct',[
+            'productos' => $producto
+        ]);
     }
 
     /**
