@@ -17,6 +17,7 @@ class CreateStockPrecioTable extends Migration
             $table->id();
             $table->integer('stock');
             $table->text('descripcion',20);
+            $table->integer('Codigo');
             $table->integer('precio');
             $table->foreignId('producto_id')->references('id')->on('producto');
             $table->foreignId('sucursal_id')->references('id')->on('sucursal');
