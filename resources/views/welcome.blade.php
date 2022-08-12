@@ -3,7 +3,8 @@
 @section('content')
 
           <a class="btn btn-primary" href="{{route('products.create')}}" type="button">Agregar Producto</a>
-          <a class="btn btn-success" href="/viewsProduct" type="button">Vista Inventario</a><br><br>
+          <a class="btn btn-success" href="{{route('products.index')}}" type="button">Vista Inventario</a>
+          <a class="btn btn-success" href="{{route('stock.index')}}" type="button">Vista Stock</a><br><br>
 
  <div class="row">
   <div class="card" style="width: 18rem;">

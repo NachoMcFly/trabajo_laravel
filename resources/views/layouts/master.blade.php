@@ -17,7 +17,7 @@
 
             <div class="col-4" align="right">
               <button type="button" class="btn btn-dark">login</button>
-              <a type="button" class="btn btn-info" href="{{route('products.index')}}">Contactanos</a>
+              <a type="button" class="btn btn-info" href="/contact">Contactanos</a>
             </div>
 
             <div class="col-12" aling="center"><br>

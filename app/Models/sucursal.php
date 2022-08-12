@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class sucursal extends Model
 {
     use HasFactory;
+    protected $primaryKey = 'id';
+    protected $table = 'sucursal';
+
+
+    public function stock(){
+        return $this->hasMany(Stock::class);
+        
+    }
 }

@@ -5,14 +5,21 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+
 class producto extends Model
 {
     use HasFactory;
     protected $primaryKey = 'id';
     protected $table = 'producto';
 
-    public function categorias(){
+    public function categoria(){
         return $this->belongsTo(Categoria::class, 'categoria_id');
         
     }
+
+    public function stock(){
+        return $this->hasMany(Stock::class);
+        
+    }
+
 }

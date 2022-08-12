@@ -3,10 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Http\Request\ProductRequest;
-use App\Models\Producto;
+use App\Models\Stock;
 
-class ProductController extends Controller
+class StockController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,10 +14,10 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $producto = Producto::get();
+        $stock = Stock::get();
         
-        return view('viewsProduct',[
-            'producto' => $producto
+        return view('viewStock',[
+            'stock' => $stock
         ]);
     }
 
@@ -29,26 +28,18 @@ class ProductController extends Controller
      */
     public function create()
     {
-        return view("createproduct");
+        //
     }
 
- 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\request  $request
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(request $request)
+    public function store(Request $request)
     {
-        $this->validate($request, [
-            'nombre' => 'required|min:3',
-            'precio' => 'required|integer',
-            'stock' => 'required|integer|min:1'
-            
-        ]);
-
-        dd($request);
+        //
     }
 
     /**

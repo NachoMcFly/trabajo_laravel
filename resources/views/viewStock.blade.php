@@ -7,13 +7,14 @@
       <h1>Vista de Productos </h1>
         @csrf
          <div class="row">
-           @foreach($producto as $producto)
+           @foreach($stock as $stock)
           <div class="col-3">
             <div class="card" style="width: 18rem;">
-            <img src="{{ $producto->imagen }}" class="card-img-top" alt="...">
+            <img src="..." class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title">{{ $producto->nombre }}</5>
-              <p class="card-text">{{ $producto->categoria_id }}</p>
+              <h5 class="card-title">{{ $stock->producto_id }}</5>
+              <p class="card-text">{{ $stock->sucursal_id }}</p>
+              <p class="card-text">{{ $stock->descripcion }}</p>
               <a href="#" class="btn btn-primary">algo</a>
             </div>
             </div>          
