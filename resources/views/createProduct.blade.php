@@ -11,9 +11,8 @@
                 <input
                     type="text"
                     class="form-control is-valid"
-                    id="nombrePro"
-                    name="nombreProducto"
-                    value=""
+                    id="nombre"
+                    name="nombre"
                     placeholder="Nombre de producto"
                     required/><br>
 
@@ -35,18 +34,16 @@
          <input
                     type="number"
                     class="form-control is-valid"
-                    id="preciopro"
+                    id="precio"
                     name="precio"
-                    value=""
                     placeholder="Precio del Producto ($)"
                     required/><br>
           
         <input
                     type="number"
                     class="form-control is-valid"
-                    id="stockPro"
+                    id="stock"
                     name="stock"
-                    value=""
                     placeholder="Stock"
                     required/>
 
