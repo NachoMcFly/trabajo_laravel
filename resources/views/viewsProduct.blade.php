@@ -6,57 +6,21 @@
       
       <h1>Vista de Productos </h1>
         @csrf
-        <div class="row">
-          
-          <div class="col-2" align="center">
-            <label for="gameName" class="form-label">Nombre Producto</label>
-            
+         <div class="row">
+           @foreach($producto as $producto)
+          <div class="col-3">
+            <div class="card" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">...</5>
+              <p class="card-text">...</p>
+              <a href="#" class="btn btn-primary">algo</a>
+            </div>
+            </div>          
           </div>
-          <div class="col-2" align="center">
-            <label for="platform" class="form-label">Categoria</label>
-
-          </div>
-          <div class="col-2" align="center">
-            <label for="developer" class="form-label">Sucursal(es)</label>
-            
-          </div>
-          <div class="col-1" align="center">
-            <label for="price" class="form-label">Stock</label>
-            
-          </div> 
-
-          <div class="col-1" align="center">
-            <label for="price" class="form-label">Precio$</label>
-            
-          </div>
-   
-        </div>
-          
-        <div class="row">
-          <div class="col-2" align="center">
-            <label for="gameName" class="form-label">Ejemplo</label>
-            
-          </div>
-          <div class="col-2" align="center">
-            <label for="platform" class="form-label">Herramienta</label>
-
-          </div>
-          <div class="col-2" align="center">
-            <label for="developer" class="form-label">Puente_Alto</label>
-            
-          </div>
-          <div class="col-1" align="center">
-            <label for="price" class="form-label">8</label>
-            
-          </div> 
-
-          <div class="col-1" align="center">
-            <label for="price" class="form-label">$888</label>
-            
-          </div>
-   
-        </div>
-        <br>
+          @endforeach
+         </div>
+         <br>
           <a class="btn btn-primary" href="{{route('products.create')}}" type="button">Agregar Producto</a><br><br>         
     </div>   
 

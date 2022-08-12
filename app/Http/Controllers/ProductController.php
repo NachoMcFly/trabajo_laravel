@@ -40,8 +40,6 @@ class ProductController extends Controller
             'nombre' => 'required|min:3',
             'precio' => 'required|integer',
             'stock' => 'required|integer|min:1'
-           
-
             
         ]);
 
