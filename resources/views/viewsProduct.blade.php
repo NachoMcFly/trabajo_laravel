@@ -21,6 +21,7 @@
           @endforeach
          </div>
          <br>
+         <a class="btn btn-danger" href="..." type="button">Eliminar</a>
           <a class="btn btn-primary" href="{{route('products.create')}}" type="button">Agregar Producto</a><br><br>         
     </div>   
 
