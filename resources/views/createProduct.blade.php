@@ -22,15 +22,7 @@
                     class="form-control is-valid"
                     id="descripcion"
                     name="descripcion"
-                    placeholder="descripción de producto"
-                    required/><br>
-
-                    <input
-                    type="text"
-                    class="form-control is-valid"
-                    id="codigo"
-                    name="codigo"
-                    placeholder="codigo de producto"
+                    placeholder="Descripción del Producto"
                     required/><br>
 
                     <input
@@ -38,17 +30,24 @@
                     class="form-control is-valid"
                     id="imagen"
                     name="imagen"
-                    placeholder="URL de producto"
+                    placeholder="URL imagen"
                     required/><br>
 
                     <select class="form-row" name="categoria" placeholder="Selecciona la categoría">
-                  <option selected value="categoria">Categoria</option>
-                    <option value="1">Patines</option>
-                    <option value="2">Repuestos</option>
-                    <option value="3">Seguridad</option>
-                    <option value="4">Herramientas</option>
-                </select><br><br>
-
+                    <option selected value="categoria">Categoria</option>
+                      <option value="1">Patines</option>
+                      <option value="2">Repuestos</option>
+                      <option value="3">Seguridad</option>
+                      <option value="4">Herramientas</option>
+                    </select><br><br>
+                
+                    <input
+                      type="text"
+                      class="form-control is-valid"
+                      id="codigo"
+                      name="codigo"
+                      placeholder="codigo de producto"
+                      required/><br>
                 </div>
               </div>
            <br>

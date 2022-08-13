@@ -21,14 +21,21 @@
             </div>
 
             <div class="col-12" aling="center"><br>
-                  <h1 class="display-4"><b>Sistema de Inventario Patines</b></h1>
-              </div>
+              <h1 class="display-4"><b>Sistema de Inventario Patines</b></h1>
+            </div>
           </div>
         </div>
       </div>
+      
+      
     @show
 
     <div class="container">
+        <div class="text-right">
+          <a class="btn btn-primary" href="{{route('products.create')}}" type="button">Agregar Producto</a>
+          <a class="btn btn-success" href="{{route('products.index')}}" type="button">Vista Inventario</a>
+          <a class="btn btn-success" href="{{route('stock.index')}}" type="button">Vista Stock</a><br><br>
+        </div><hr>
         @yield('content')
     </div>
 

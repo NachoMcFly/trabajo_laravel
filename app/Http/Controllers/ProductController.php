@@ -33,7 +33,6 @@ class ProductController extends Controller
         return view("createproduct");
     }
 
- 
     /**
      * Store a newly created resource in storage.
      *
@@ -42,24 +41,18 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-       
-        
-
         $this->validate($request, [
             'nombre' => 'required',
             'descripcion' => 'required',
-            'codigo' => 'required',
             'imagen' => 'required'
-            
-            
         ]);
 
         $producto = new Producto();
         $producto->nombre = $request->nombre;
         $producto->descripcion = $request->descripcion;
-        $producto->codigo = $request->codigo;
         $producto->imagen = $request->imagen;
         $producto->categoria_id = $request->categoria;
+        $producto->codigo = $request->codigo;
         $producto->save();
 
         return redirect()->route('products.index');

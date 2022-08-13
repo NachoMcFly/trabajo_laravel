@@ -11,9 +11,7 @@ class Sucursal extends Model
     protected $primaryKey = 'id';
     protected $table = 'sucursal';
 
-
     public function stock(){
         return $this->hasMany(Stock::class);
-        
     }
 }

@@ -16,32 +16,32 @@ class agregarProducto extends Seeder
     {
         DB::table('producto')->insert(array(
             [
-                'nombre' => 'Patines',
-                'descripcion' => 'patines rapidicimos',
-                'codigo' => '45684213',
-                'imagen' => 'https://cdn.shopify.com/s/files/1/1629/6545/products/1_4_1024x1024_2x_5f33b371-f676-4c1e-a1b7-deffdc3f186f_1024x.jpg?v=1630522669',
-                'categoria_id' => 1
+                'nombre' => 'Patines Fitness',
+                'descripcion' => 'Patines en Línea Fitness Morado Hook HK-110',
+                'imagen' => 'https://cdn.shopify.com/s/files/1/1629/6545/products/IMG_0016_1_1x1_1_1200_x_1200_500x.jpg?v=1628525938',
+                'categoria_id' => 1,
+                'codigo' => 1
             ],
             [
-                'nombre' => 'destornillador',
-                'descripcion' => 'Destornillador muy bueno',
-                'codigo' => '45684213',
-                'imagen' => 'https://www.fuzer.cl/wp-content/uploads/2020/07/c04eGDB.jpg',
-                'categoria_id' => 4
+                'nombre' => 'Llavero Allen',
+                'descripcion' => 'Llavero Allen 6 Piezas de 2 a 7mm',
+                'imagen' => 'https://cdn.shopify.com/s/files/1/1629/6545/products/LlaveroAllen6Piezasde2a7mm_500x.jpg?v=1653844542',
+                'categoria_id' => 4,
+                'codigo' => 1
             ],
             [
-                'nombre' => 'rodilleras',
-                'descripcion' => 'Rodilleras protectoras',
-                'codigo' => '45684213',
-                'imagen' => 'https://www.kupfer.cl/media/catalog/product/cache/b3b166914d87ce343d4dc5ec5117b502/r/o/rodillera_steelpro.jpg',
-                'categoria_id' => 3
+                'nombre' => 'Rodilleras Miltisport',
+                'descripcion' => 'Rodillera Multisport OnWheels! Negras',
+                'imagen' => 'https://cdn.shopify.com/s/files/1/1629/6545/products/RodilleraMultisportOnwheels1_500x.webp?v=1652798536',
+                'categoria_id' => 3,
+                'codigo' => 1
             ],
             [
-                'nombre' => 'set de ruedas',
-                'descripcion' => 'Ruedas de 80mm',
-                'codigo' => '45684213',
-                'imagen' => 'https://www.alacalufe.cl/wp-content/uploads/2020/11/90mm..jpg',
-                'categoria_id' => 2
+                'nombre' => 'Set de Ruedas',
+                'descripcion' => 'Ruedas Hurricane Rojas 76MM Powerslide',
+                'imagen' => 'https://cdn.shopify.com/s/files/1/1629/6545/products/905194_76_PS_HURRICANE_wheels_red_2020_view1_500x.jpg?v=1605817156',
+                'categoria_id' => 2,
+                'codigo' => 1
             ]
             ));
     }

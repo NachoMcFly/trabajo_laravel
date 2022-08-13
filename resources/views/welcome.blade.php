@@ -2,11 +2,7 @@
 
 @section('content')
 
-          <a class="btn btn-primary" href="{{route('products.create')}}" type="button">Agregar Producto</a>
-          <a class="btn btn-success" href="{{route('products.index')}}" type="button">Vista Inventario</a>
-          <a class="btn btn-success" href="{{route('stock.index')}}" type="button">Vista Stock</a><br><br>
-
- <div class="row">
+<div class="row">
   <div class="card" style="width: 18rem;">
   <img src="https://cdn.shopify.com/s/files/1/1629/6545/products/1_4_1024x1024_2x_5f33b371-f676-4c1e-a1b7-deffdc3f186f_1024x.jpg?v=1630522669" 
              class="card-img-top" alt="..." width="190" height="210">

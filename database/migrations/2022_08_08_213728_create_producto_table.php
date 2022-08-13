@@ -17,9 +17,9 @@ class CreateProductoTable extends Migration
             $table->id();
             $table->string('nombre', 50);
             $table->text('descripcion',20);
-            $table->integer('codigo');
             $table->string('imagen');
             $table->foreignId('categoria_id')->references('id')->on('categoria');
+            $table->integer('codigo');
             $table->timestamps();
         });
     }

@@ -13,14 +13,11 @@ class Stock extends Model
 
     public function producto(){
         return $this->belongsTo(Producto::class, 'producto_id');
-        
     }
 
     public function sucursal(){
         return $this->belongsTo(Sucursal::class, 'sucursal_id');
-        
     }
-
 }
 
 
