@@ -15,10 +15,10 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $producto = Producto::get();
+        $productos = Producto::all();
         
         return view('viewsProduct',[
-            'producto' => $producto
+            'productos' => $productos
         ]);
     }
 
@@ -29,6 +29,7 @@ class ProductController extends Controller
      */
     public function create()
     {
+        //TODO: enviar las categorias a la vista
         return view("createproduct");
     }
 
@@ -36,19 +37,32 @@ class ProductController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\request  $request
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(request $request)
+    public function store(Request $request)
     {
+       
+        
+
         $this->validate($request, [
-            'nombre' => 'required|min:3',
-            'precio' => 'required|integer',
-            'stock' => 'required|integer|min:1'
+            'nombre' => 'required',
+            'descripcion' => 'required',
+            'codigo' => 'required',
+            'imagen' => 'required'
+            
             
         ]);
 
-        dd($request);
+        $producto = new Producto();
+        $producto->nombre = $request->nombre;
+        $producto->descripcion = $request->descripcion;
+        $producto->codigo = $request->codigo;
+        $producto->imagen = $request->imagen;
+        $producto->categoria_id = $request->categoria;
+        $producto->save();
+
+        return redirect()->route('products.index');
     }
 
     /**
@@ -59,7 +73,8 @@ class ProductController extends Controller
      */
     public function show($id)
     {
-        //
+        dd($id);
+        //TODO: traer el producto con el id 
     }
 
     /**
@@ -93,6 +108,6 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-        //
+        //TODO terminar el destroy
     }
 }
