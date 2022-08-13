@@ -7,6 +7,7 @@
     <form action="{{route('products.store')}}" method="post">
     @csrf
         <div class="form-row">
+          
             <div class="col-md-6 mb-3">
                 <input
                     type="text"
@@ -16,36 +17,37 @@
                     placeholder="Nombre de producto"
                     required/><br>
 
-                <select class="form-row" name="categoria" placeholder="Categoria">
-                  <option selected value="categoria">Categoria</option>
-                    <option value="patines">Patines</option>
-                    <option value="repuestos">Repuestos</option>
-                    <option value="seguridad">Seguridad</option>
-                    <option value="herramientas">Herramientas</option>
-                </select><br><br>
-                  
-                  <select class="form-row" name="sucursal" placeholder="Sucursal">
-                    <option selected value="sucursal">Sucursal</option>
-                      <option value="puenteAlto">Puente Alto</option>
-                      <option value="laFlorida">La Florida</option>
-                      <option value="nunoa">Ñuñoa</option>
-                  </select><br><br>
-                  
-         <input
-                    type="number"
+                    <input
+                    type="text"
                     class="form-control is-valid"
-                    id="precio"
-                    name="precio"
-                    placeholder="Precio del Producto ($)"
+                    id="descripcion"
+                    name="descripcion"
+                    placeholder="descripción de producto"
                     required/><br>
-          
-        <input
-                    type="number"
+
+                    <input
+                    type="text"
                     class="form-control is-valid"
-                    id="stock"
-                    name="stock"
-                    placeholder="Stock"
-                    required/>
+                    id="codigo"
+                    name="codigo"
+                    placeholder="codigo de producto"
+                    required/><br>
+
+                    <input
+                    type="text"
+                    class="form-control is-valid"
+                    id="imagen"
+                    name="imagen"
+                    placeholder="URL de producto"
+                    required/><br>
+
+                    <select class="form-row" name="categoria" placeholder="Selecciona la categoría">
+                  <option selected value="categoria">Categoria</option>
+                    <option value="1">Patines</option>
+                    <option value="2">Repuestos</option>
+                    <option value="3">Seguridad</option>
+                    <option value="4">Herramientas</option>
+                </select><br><br>
 
                 </div>
               </div>

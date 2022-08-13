@@ -16,6 +16,8 @@ class CreateProductoTable extends Migration
         Schema::create('producto', function (Blueprint $table) {
             $table->id();
             $table->string('nombre', 50);
+            $table->text('descripcion',20);
+            $table->integer('codigo');
             $table->string('imagen');
             $table->foreignId('categoria_id')->references('id')->on('categoria');
             $table->timestamps();
