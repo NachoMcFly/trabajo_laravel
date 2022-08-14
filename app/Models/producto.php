@@ -13,12 +13,10 @@ class Producto extends Model
 
     public function categoria(){
         return $this->belongsTo(Categoria::class, 'categoria_id');
-        
     }
 
     public function stock(){
-        return $this->hasMany(Stock::class);
-        
+        return $this->hasMany(Stock::class);    
     }
 
 }

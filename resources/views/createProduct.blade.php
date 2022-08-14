@@ -33,21 +33,14 @@
                     placeholder="URL imagen"
                     required/><br>
 
-                    <select class="form-row" name="categoria" placeholder="Selecciona la categoría">
-                    <option selected value="categoria">Categoria</option>
-                      <option value="1">Patines</option>
-                      <option value="2">Repuestos</option>
-                      <option value="3">Seguridad</option>
-                      <option value="4">Herramientas</option>
+                    <select class="custom-select" name="categoria" placeholder="Selecciona la categoría">
+                    <option selected value="categoria"> -- Categorias -- </option>
+                    @foreach ($categoria as $categoria)
+                        <option value="{{ $categoria->id }}">{{ $categoria->tipo }}</option> 
+                      @endforeach
                     </select><br><br>
                 
-                    <input
-                      type="text"
-                      class="form-control is-valid"
-                      id="codigo"
-                      name="codigo"
-                      placeholder="codigo de producto"
-                      required/><br>
+                    
                 </div>
               </div>
            <br>

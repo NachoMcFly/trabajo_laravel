@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Stock;
+use App\Models\Producto;
+use App\Models\Sucursal;
 
 class StockController extends Controller
 {
@@ -28,7 +30,9 @@ class StockController extends Controller
      */
     public function create()
     {
-        //
+        $productos = Producto::all();
+        $sucursal = Sucursal::all();
+        return view("createStock", compact('productos'), compact('sucursal'));
     }
 
     /**
@@ -39,7 +43,20 @@ class StockController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
+        $this->validate($request, [
+            'stock' => 'required',
+            'precio' => 'required'
+        ]);
+      
+        $stock = new Stock();
+        $stock->stock = $request->stock;
+        $stock->precio = $request->precio;
+        $stock->producto_id = $request->producto;
+        $stock->sucursal_id = $request->sucursal;
+        $stock->save();
+
+        return redirect()->route('stock.index');
     }
 
     /**

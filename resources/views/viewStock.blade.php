@@ -14,12 +14,12 @@
               <p class="card-text">Sucursal: {{ $stock->sucursal()->first()->nombre }}</p>
               <p class="card-text">Stock: {{ $stock->stock }}</p>
               <p class="card-text">Precio: ${{ $stock->precio }}</p>
+              <p class="card-text">Sku: {{ $stock->producto()->first()->codigo}}</p> 
             </div>
           </div>              
         </div>    
       @endforeach           
-  </div><br>
-  <a class="btn btn-primary" href="{{route('products.create')}}" type="button">Agregar Producto</a><br><br>         
+  </div><br>        
 </div>       
 
 @stop

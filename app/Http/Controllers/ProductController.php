@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Request\ProductRequest;
 use App\Models\Producto;
+use App\Models\Categoria;
 
 class ProductController extends Controller
 {
@@ -29,8 +30,8 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //TODO: enviar las categorias a la vista
-        return view("createproduct");
+        $categoria = Categoria::all();
+        return view("createproduct", compact('categoria'));
     }
 
     /**
@@ -46,13 +47,13 @@ class ProductController extends Controller
             'descripcion' => 'required',
             'imagen' => 'required'
         ]);
-
+      
         $producto = new Producto();
         $producto->nombre = $request->nombre;
         $producto->descripcion = $request->descripcion;
         $producto->imagen = $request->imagen;
         $producto->categoria_id = $request->categoria;
-        $producto->codigo = $request->codigo;
+        $producto->codigo = $request->categoria*1001;
         $producto->save();
 
         return redirect()->route('products.index');

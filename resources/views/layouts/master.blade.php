@@ -15,7 +15,7 @@
               <a class="btn btn-success" href="/" type="button">Inicio</a>         
             </div>
 
-            <div class="col-4" align="right">
+            <div class="col-8" align="right">
               <button type="button" class="btn btn-dark">login</button>
               <a type="button" class="btn btn-info" href="/contact">Contactanos</a>
             </div>
@@ -31,11 +31,16 @@
     @show
 
     <div class="container">
-        <div class="text-right">
+      <div class="row">
+        <div class="col-4" align="left">
           <a class="btn btn-primary" href="{{route('products.create')}}" type="button">Agregar Producto</a>
           <a class="btn btn-success" href="{{route('products.index')}}" type="button">Vista Inventario</a>
+        </div>
+        <div class="col-8" align="right">
+          <a class="btn btn-primary" href="{{route('stock.create')}}" type="button">Agregar Stock/Precio</a>
           <a class="btn btn-success" href="{{route('stock.index')}}" type="button">Vista Stock</a><br><br>
-        </div><hr>
+        </div></div>
+        <hr>
         @yield('content')
     </div>
 
