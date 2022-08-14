@@ -13,8 +13,6 @@
               <h5 class="card-title">{{ $producto->nombre }}</h5>
               <p class="card-text">Descripcion: {{ $producto->descripcion }}.</p>
               <p class="card-text">Categoria: {{ $producto->categoria()->first()->tipo}}</p>
-              <p class="card-text">Sku: {{ $producto->codigo}}</p> 
-              
             </div>
           </div>          
         </div>

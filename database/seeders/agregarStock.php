@@ -19,25 +19,29 @@ class agregarStock extends Seeder
                 'stock' => '10',
                 'precio' => '59000',
                 'producto_id' => '1',
-                'sucursal_id' => '1'
+                'sucursal_id' => '1',
+                'codigo' => '1001'
             ],
             [
                 'stock' => '10', 
                 'precio' => '39000',
                 'producto_id' => '2',
-                'sucursal_id' => '1'
+                'sucursal_id' => '1',
+                'codigo' => '1002'
             ],
             [
                 'stock' => '10',
                 'precio' => '69000',
                 'producto_id' => '3',
-                'sucursal_id' => '2'
+                'sucursal_id' => '2',
+                'codigo' => '2003'
             ],
             [
                 'stock' => '10',
                 'precio' => '89000',
                 'producto_id' => '4',
-                'sucursal_id' => '3'
+                'sucursal_id' => '3',
+                'codigo' => '3004'
             ]
             ));
     }

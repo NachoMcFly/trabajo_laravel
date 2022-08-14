@@ -53,7 +53,6 @@ class ProductController extends Controller
         $producto->descripcion = $request->descripcion;
         $producto->imagen = $request->imagen;
         $producto->categoria_id = $request->categoria;
-        $producto->codigo = $request->categoria*1001;
         $producto->save();
 
         return redirect()->route('products.index');

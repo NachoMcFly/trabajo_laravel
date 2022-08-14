@@ -48,12 +48,13 @@ class StockController extends Controller
             'stock' => 'required',
             'precio' => 'required'
         ]);
-      
+
         $stock = new Stock();
         $stock->stock = $request->stock;
         $stock->precio = $request->precio;
         $stock->producto_id = $request->producto;
         $stock->sucursal_id = $request->sucursal;
+        $stock->codigo = $request->sucursal*1000+$request->producto;
         $stock->save();
 
         return redirect()->route('stock.index');

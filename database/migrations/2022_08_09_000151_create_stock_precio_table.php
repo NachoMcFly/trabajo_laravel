@@ -19,6 +19,7 @@ class CreateStockPrecioTable extends Migration
             $table->integer('precio');
             $table->foreignId('producto_id')->references('id')->on('producto');
             $table->foreignId('sucursal_id')->references('id')->on('sucursal');
+            $table->integer('codigo');
             $table->timestamps();
         });
     }
