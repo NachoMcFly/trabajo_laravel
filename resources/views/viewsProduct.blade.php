@@ -14,13 +14,14 @@
               <p class="card-text">Descripcion: {{ $producto->descripcion }}.</p>
               <p class="card-text">Categoria: {{ $producto->categoria()->first()->tipo}}</p>
               <p class="card-text">Sku: {{ $producto->codigo}}</p> 
-              <a href="{{route('products.show',$producto->id)}}" class="btn btn-warning">Detalles</a>
+              
             </div>
           </div>          
         </div>
-        @endforeach         
-  </div><br>
-  <a class="btn btn-danger" href="{{route('products.destroy', $producto->id)}}" type="button">Eliminar</a>     
+        @endforeach 
+      </div><br>
+      <a class="btn btn-danger" href="..." type="button">Eliminar</a>
+        
 </div>   
 
 @stop
