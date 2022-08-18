@@ -32,11 +32,13 @@
 
     <div class="container">
       <div class="row">
-        <div class="col-4" align="left">
+        <div class="col-6" align="left">
           <a class="btn btn-primary" href="{{route('products.create')}}" type="button">Agregar Producto</a>
           <a class="btn btn-success" href="{{route('products.index')}}" type="button">Vista Inventario</a>
+          <a class="btn btn-warning" href="{{route('products.index')}}" type="button">Buscar
+          </a>
         </div>
-        <div class="col-8" align="right">
+        <div class="col-6" align="right">
           <a class="btn btn-primary" href="{{route('stock.create')}}" type="button">Agregar Stock/Precio</a>
           <a class="btn btn-success" href="{{route('stock.index')}}" type="button">Vista Stock</a><br><br>
         </div></div>

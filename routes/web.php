@@ -27,6 +27,10 @@ Route::get('/contact', function () {
     return view('contact');
 });
 
+Route::get('/searchProduct', function () {
+    return view('searchProduct');
+});
+
 
 Route::get('/products/index', [ProductController::class, 'index'])->name('products.index');
 

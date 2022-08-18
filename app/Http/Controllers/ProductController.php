@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Request\ProductRequest;
 use App\Models\Producto;
 use App\Models\Categoria;
+use Illuminate\Support\Facades\DB;
 
 class ProductController extends Controller
 {
@@ -14,13 +15,26 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $productos = Producto::all();
+/**         
+*        $texto=trim($request->get('texto'));
+*        $productos = DB::table('producto')
+*                            ->select('id', 'nombre', 'imagen','categoria_id', 'descripcion')
+*                            ->where('nombre','LIKE','%'.$texto.'%')
+*                            ->orderBy('nombre', 'asc')
+*                            ->paginate(10);
+*        $categoria = Categoria::all();
+*        return view('searchProduct', compact('productos', 'texto'));
+*        
+*/
+
+       $productos = Producto::all();
         
         return view('viewsProduct',[
             'productos' => $productos
         ]);
+
     }
 
     /**
