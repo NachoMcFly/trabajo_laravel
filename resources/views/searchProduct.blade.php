@@ -29,7 +29,7 @@
         <tr>
           <td><img src="{{$producto->imagen}}" class="card-img-top" alt="..." style="width: 18rem;"></td>
           <td>{{$producto->nombre}}</td>
-          <td>{{$producto->categoria_id}}</td>
+          <td>{{ $producto->categoria()->first()->tipo}}</td>
           <td>{{$producto->descripcion}}</td> 
         </tr>
       </tbody>

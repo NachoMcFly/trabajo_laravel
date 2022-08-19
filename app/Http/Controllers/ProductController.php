@@ -17,6 +17,15 @@ class ProductController extends Controller
      */
     public function index(Request $request)
     {
+        $categoria = Categoria::all();
+        $texto=trim($request->get('texto'));
+        $productos = Producto::where('nombre','LIKE','%'.$texto.'%')->get();
+
+        return view('searchProduct', [
+                        'productos' => $productos,
+                        'categorias' => $categoria
+                    ], compact('productos', 'texto'));
+
 /**         
 *        $texto=trim($request->get('texto'));
 *        $productos = DB::table('producto')
@@ -28,13 +37,13 @@ class ProductController extends Controller
 *        return view('searchProduct', compact('productos', 'texto'));
 *        
 */
-
-       $productos = Producto::all();
-        
-        return view('viewsProduct',[
-            'productos' => $productos
-        ]);
-
+/**
+*       $productos = Producto::all();
+*        
+*        return view('viewsProduct',[
+*            'productos' => $productos
+*        ]);
+*/
     }
 
     /**
