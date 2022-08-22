@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\StockController;
+use App\Http\Controllers\SearchController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,6 +32,8 @@ Route::get('/searchProduct', function () {
     return view('searchProduct');
 });
 
+
+// controlador producto
 
 Route::get('/products/index', [ProductController::class, 'index'])->name('products.index');
 
@@ -64,3 +67,18 @@ Route::put('/stock/{id}', [StockController::class, 'update'])->name('stock.updat
 
 Route::delete('/stock/{id}', [StockController::class, 'destroy'])->name('stock.destroy');
 
+//controlador SearchController
+
+Route::get('/search/index', [SearchController::class, 'index'])->name('search.index');
+
+Route::get('/search/create', [SearchController::class, 'create'])->name('search.create');
+
+Route::post('/search', [SearchController::class, 'store'])->name('search.store');
+
+Route::get('/search/{id}', [SearchController::class, 'show'])->name('search.show');
+
+Route::get('/search/{id}/edit', [SearchController::class, 'edit'])->name('search.edit');
+
+Route::put('/search/{id}', [SearchController::class, 'update'])->name('search.update');
+
+Route::delete('/search/{id}', [SearchController::class, 'destroy'])->name('search.destroy');

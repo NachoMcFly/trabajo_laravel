@@ -2,10 +2,10 @@
 
 @section('content')
 
-<form action="{{route('products.index')}}" method="get">
+<form action="{{route('search.index')}}" method="get">
   <div class="form-row">
     <div class="col-sm-4">
-      <input type="text" class="form-control" name="texto" value='{{$texto}}'>
+      <input type="text" class="form-control" name="texto" placeholder="Buscar por codigo de producto" value='{{$texto}}'>
     </div>
     <div class="col-auto">
       <input type="submit" class="btn btn-info" value="Buscar">

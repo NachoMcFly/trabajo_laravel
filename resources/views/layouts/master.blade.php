@@ -35,7 +35,7 @@
         <div class="col-6" align="left">
           <a class="btn btn-primary" href="{{route('products.create')}}" type="button">Agregar Producto</a>
           <a class="btn btn-success" href="{{route('products.index')}}" type="button">Vista Inventario</a>
-          <a class="btn btn-warning" href="{{route('products.index')}}" type="button">Buscar
+          <a class="btn btn-warning" href="{{route('search.index')}}" type="button">Buscar
           </a>
         </div>
         <div class="col-6" align="right">
