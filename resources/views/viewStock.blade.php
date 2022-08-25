@@ -17,7 +17,7 @@
               <p class="card-text">Sku: {{ $stock->codigo}}</p> 
             </div>
             <a class="btn btn-warning" href="{{route( 'stock.edit', $stock->id )}}" type="button">Editar</a>
-            <a class="btn btn-danger" href="..." type="button">Eliminar</a> 
+            <a class="btn btn-danger" href="{{route( 'stock.destroy', $stock->id )}}" type="button">Eliminar</a> 
           </div>            
         </div>    
       @endforeach           
