@@ -18,14 +18,17 @@ class SearchController extends Controller
     {
 
 
-       $categoria = Categoria::all();
+        $categoria = Categoria::all();
+        $stock_precio = Stock::all();
         $texto=trim($request->get('texto'));
+        $stock_precio = Stock::where('codigo','LIKE','%'.$texto.'%')->get();
         $productos = Producto::where('nombre','LIKE','%'.$texto.'%')->get();
-
+        
         return view('searchProduct', [
                         'productos' => $productos,
-                        'categorias' => $categoria
-                    ], compact('productos', 'texto'));
+                        'categorias' => $categoria,
+                        'stock_precio' => $stock_precio
+                    ], compact('stock_precio', 'texto'));
     }
 
     /**
