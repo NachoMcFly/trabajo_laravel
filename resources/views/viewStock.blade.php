@@ -17,8 +17,11 @@
               <p class="card-text">Sku: {{ $stock->codigo}}</p> 
             </div>
             <a class="btn btn-warning" href="{{route( 'stock.edit', $stock->id )}}" type="button">Editar</a>
-            <a class="btn btn-danger" href="{{route( 'stock.destroy', $stock->id )}}" type="button">Eliminar</a> 
-          </div>            
+            <form action="{{route('stock.destroy', $stock->id )}}" method="POST">
+            @method('DELETE')
+            @csrf
+            <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
+            </form>          </div>            
         </div>    
       @endforeach           
   </div><br>        

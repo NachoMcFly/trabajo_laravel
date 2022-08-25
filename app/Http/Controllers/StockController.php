@@ -120,32 +120,10 @@ class StockController extends Controller
     {       
         
         $stock = Stock::findOrFail($id);
-        $stock = delete();
+        $stock->delete();
 
-        $productos = Producto::all();
-        $sucursal = Sucursal::all();
 
         return redirect()->route('stock.index');
-
-       // dd($request);
-
-        //$producto_id = $stock[0]->$producto_id;
-
-      /*  if(\Storage::disk('nombreStorage')->has($producto[0]->imagen)){
-            \Storage::disk('nombreStorage')->delete($producto[0]->imagen)
-        }
         
-        dd($request);
-        $stock = Producto::where('id', $id)->get();
-        dd($request);
-        $stock = Stock::find($id);
-        $stock = delete();
-
-        $producto = Producto::all();
-
-        $stock = Stock::all();
-
-        return redirect()->route('stock.index');
-        */
     }
 }

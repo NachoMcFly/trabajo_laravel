@@ -14,8 +14,13 @@
               <p class="card-text">Descripcion: {{ $producto->descripcion }}.</p>
               <p class="card-text">Categoria: {{ $producto->categoria()->first()->tipo}}</p>
             </div>
-            <a class="btn btn-warning" href="{{route( 'products.edit', $producto->id )}}" type="button">Editar</a>
-      <a class="btn btn-danger" href="..." type="button">Eliminar</a>
+            <a class="btn btn-warning" href="{{route( 'products.edit', $producto->id )}}" class="d-inline" type="button">Editar</a>
+            
+            <form action="{{route('products.destroy', $producto->id )}}" method="POST">
+            @method('DELETE')
+            @csrf
+            <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
+            </form>
           </div>          
         </div>
         @endforeach 
