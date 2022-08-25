@@ -100,17 +100,6 @@ class StockController extends Controller
      */
     public function update(Request $request, $id)
     {
-        /*
-        $stock = Stock::findOrFail($id);
-
-        $productos = Producto::all();
-
-        return view('editStock',[
-            'stock' => $stock,
-            'producto' => $productos
-        ], compact('stock'));
-
-*/
         $stock = Stock::find($id);
         $stock->stock = $request->stock;
         $stock->precio = $request->precio;
@@ -128,28 +117,35 @@ class StockController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
-    {
+    {       
         
-        $stock = Stock::where('id', $id)->get();
-        dd($request);
+        $stock = Stock::findOrFail($id);
+        $stock = delete();
+
+        $productos = Producto::all();
+        $sucursal = Sucursal::all();
+
+        return redirect()->route('stock.index');
+
+       // dd($request);
 
         //$producto_id = $stock[0]->$producto_id;
 
       /*  if(\Storage::disk('nombreStorage')->has($producto[0]->imagen)){
             \Storage::disk('nombreStorage')->delete($producto[0]->imagen)
         }
-        *
+        
+        dd($request);
+        $stock = Producto::where('id', $id)->get();
+        dd($request);
+        $stock = Stock::find($id);
+        $stock = delete();
 
-        $stockEliminar = Stock::find($id);
-        $stockEliminar = delete();
+        $producto = Producto::all();
 
-        $producto = Producto::where('id', $producto_id)->get();
+        $stock = Stock::all();
 
-        $stock = Stock::where('producto_id', $producto_id)->get();
-
-        return view('viewStock',[
-            'stock' => $stock
-        ]);
+        return redirect()->route('stock.index');
         */
     }
 }
