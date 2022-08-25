@@ -40,7 +40,7 @@
 
                     <select class="custom-select" name="sucursal" placeholder="Selecciona la sucursal">
                       @foreach ($sucursal as $sucursal)
-                        @if($producto->id == $stock->sucursal_id)
+                        @if($sucursal->id == $stock->sucursal_id)
                           <option value="{{ $sucursal->id }}" selected>{{ $sucursal->nombre }}</option>
                         @else
                         <option value="{{ $sucursal->id }}">{{ $sucursal->nombre }}</option>

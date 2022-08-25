@@ -17,37 +17,11 @@ class ProductController extends Controller
      */
     public function index(Request $request)
     {
-        /*
-        $categoria = Categoria::all();
-        $texto=trim($request->get('texto'));
-        $productos = Producto::where('nombre','LIKE','%'.$texto.'%')->get();
-
-        return view('searchProduct', [
-                        'productos' => $productos,
-                        'categorias' => $categoria
-                    ], compact('productos', 'texto'));
-        */
-
-/*       
-*        $texto=trim($request->get('texto'));
-*        $productos = DB::table('producto')
-*                            ->select('id', 'nombre', 'imagen','categoria_id', 'descripcion')
-*                            ->where('nombre','LIKE','%'.$texto.'%')
-*                            ->orderBy('nombre', 'asc')
-*                            ->paginate(10);
-*        $categoria = Categoria::all();
-*        return view('searchProduct', compact('productos', 'texto'));
-*        
-*/
-
-
        $productos = Producto::all();
         
         return view('viewsProduct',[
            'productos' => $productos
         ]);
-
-
     }
 
     /**
@@ -107,7 +81,6 @@ class ProductController extends Controller
     {
         $producto = Producto::findOrFail($id);
 
-        $productos = Producto::all();
         $categoria = Categoria::all();
 
         return view('editProduct',[
@@ -125,7 +98,7 @@ class ProductController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $producto = new Producto();
+        $producto = Producto::find($id);
         $producto->nombre = $request->nombre;
         $producto->descripcion = $request->descripcion;
         $producto->imagen = $request->imagen;

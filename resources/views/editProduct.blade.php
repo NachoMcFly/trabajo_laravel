@@ -10,8 +10,14 @@
         <div class="form-row">
           
             <div class="col-md-6 mb-3">
-                
-        
+                    <input
+                    type="text"
+                    class="form-control is-valid"
+                    id="nombre"
+                    name="nombre"
+                    placeholder="Nombre de producto"
+                    value="{{ $producto->nombre }}"
+                    required/><br>
 
                     <input
                     type="text"
@@ -32,19 +38,15 @@
                     required/><br>
 
                     <select class="custom-select" name="categoria" placeholder="Selecciona la categoría">
-                    <option selected value="categoria"> -- Categorias -- </option>
-                    @foreach ($categoria as $categoria)
-                        <option value="{{ $categoria->id }}">{{ $categoria->tipo }}</option> 
+                      @foreach ($categoria as $categoria)
+                        @if($categoria->id == $producto->categoria_id)
+                            <option value="{{ $categoria->id }}" selected> {{ $categoria->tipo }}</option>
+                        @else
+                        <option value="{{ $categoria->id }}" > {{ $categoria->tipo }}</option>
+                        @endif 
                       @endforeach
                     </select><br><br>
 
-                    <select class="custom-select" name="nombre" placeholder="Selecciona el nombre de producto">
-                    <option selected value="producto"> -- Productos -- </option>
-                    @foreach ($producto as $producto)
-                        <option value="{{ $producto->nombre }}">{{ $producto->nombre }}</option> 
-                      @endforeach
-                    </select><br><br>
-                    
                 </div>
               </div>
               <br>
