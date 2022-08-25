@@ -105,7 +105,15 @@ class ProductController extends Controller
      */
     public function edit($id)
     {
-        //
+        $producto = Producto::findOrFail($id);
+
+        $productos = Producto::all();
+        $categoria = Categoria::all();
+
+        return view('editProduct',[
+            'producto' => $producto,
+            'categoria' => $categoria
+        ], compact('producto', 'categoria'));
     }
 
     /**
@@ -117,7 +125,14 @@ class ProductController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $producto = new Producto();
+        $producto->nombre = $request->nombre;
+        $producto->descripcion = $request->descripcion;
+        $producto->imagen = $request->imagen;
+        $producto->categoria_id = $request->categoria;
+        $producto->save();
+
+        return redirect()->route('products.index');
     }
 
     /**

@@ -8,7 +8,7 @@
     @foreach($stock as $stock)
       <div class="col-3">
         <div class="card" style="width: 18rem;">
-        <img src="{{ $stock->producto()->first()->imagen }}" class="card-img-top" alt="...">
+          <img src="{{ $stock->producto()->first()->imagen }}" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">{{ $stock->producto()->first()->nombre }}</h5>
               <p class="card-text">Sucursal: {{ $stock->sucursal()->first()->nombre }}</p>
@@ -16,7 +16,9 @@
               <p class="card-text">Precio: ${{ $stock->precio }}</p>
               <p class="card-text">Sku: {{ $stock->codigo}}</p> 
             </div>
-          </div>              
+            <a class="btn btn-warning" href="{{route( 'stock.edit', $stock->id )}}" type="button">Editar</a>
+            <a class="btn btn-danger" href="..." type="button">Eliminar</a> 
+          </div>            
         </div>    
       @endforeach           
   </div><br>        

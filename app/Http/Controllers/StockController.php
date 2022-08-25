@@ -79,7 +79,16 @@ class StockController extends Controller
      */
     public function edit($id)
     {
-        //
+        $stock = Stock::findOrFail($id);
+
+        $productos = Producto::all();
+        $sucursal = Sucursal::all();
+
+        return view('editStock',[
+            'stock' => $stock,
+            'producto' => $productos,
+            'sucursal' => $sucursal
+        ], compact('stock', 'productos', 'sucursal'));
     }
 
     /**
@@ -91,7 +100,25 @@ class StockController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        /*
+        $stock = Stock::findOrFail($id);
+
+        $productos = Producto::all();
+
+        return view('editStock',[
+            'stock' => $stock,
+            'producto' => $productos
+        ], compact('stock'));
+
+*/
+        $stock = Stock::find($id);
+        $stock->stock = $request->stock;
+        $stock->precio = $request->precio;
+        $stock->producto_id = $request->producto;
+        $stock->sucursal_id = $request->sucursal;
+        $stock->save();
+        
+        return redirect()->route('stock.index');
     }
 
     /**
@@ -102,6 +129,27 @@ class StockController extends Controller
      */
     public function destroy($id)
     {
-        //
+        
+        $stock = Stock::where('id', $id)->get();
+        dd($request);
+
+        //$producto_id = $stock[0]->$producto_id;
+
+      /*  if(\Storage::disk('nombreStorage')->has($producto[0]->imagen)){
+            \Storage::disk('nombreStorage')->delete($producto[0]->imagen)
+        }
+        *
+
+        $stockEliminar = Stock::find($id);
+        $stockEliminar = delete();
+
+        $producto = Producto::where('id', $producto_id)->get();
+
+        $stock = Stock::where('producto_id', $producto_id)->get();
+
+        return view('viewStock',[
+            'stock' => $stock
+        ]);
+        */
     }
 }

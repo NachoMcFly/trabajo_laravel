@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Producto;
 use App\Models\Categoria;
 use App\Models\Stock;
+use App\Models\Sucursal;
 
 class SearchController extends Controller
 {
@@ -18,13 +19,25 @@ class SearchController extends Controller
     {
 
 
+
         $categoria = Categoria::all();
         $stock_precio = Stock::all();
         $texto=trim($request->get('texto'));
         $stock_precio = Stock::where('codigo','LIKE','%'.$texto.'%')->get();
         $productos = Producto::where('nombre','LIKE','%'.$texto.'%')->get();
         
+
+        $texto=trim($request->get('texto'));
+        //dd($request);
+        $productos = Producto::where('nombre','LIKE','%'.$texto.'%')->get();
+        $stock = Stock::where('codigo','LIKE','%'.$texto.'%')->get();
+        //$stock = Stock::all();
+        //$productos = Producto::all();
+        $categoria = Categoria::all();
+
+
         return view('searchProduct', [
+                        'stock' => $stock,
                         'productos' => $productos,
                         'categorias' => $categoria,
                         'stock_precio' => $stock_precio
