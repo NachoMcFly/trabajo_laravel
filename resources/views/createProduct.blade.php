@@ -9,7 +9,7 @@
         <div class="form-row">
           
             <div class="col-md-6 mb-3">
-                <input
+                    <input
                     type="text"
                     class="form-control is-valid"
                     id="nombre"
@@ -37,7 +37,7 @@
                     <option selected value="categoria"> -- Categorias -- </option>
                     @foreach ($categoria as $categoria)
                         <option value="{{ $categoria->id }}">{{ $categoria->tipo }}</option> 
-                      @endforeach
+                    @endforeach
                     </select><br><br>
                 
                     

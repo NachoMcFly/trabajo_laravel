@@ -9,7 +9,7 @@
         <div class="form-row">
           
             <div class="col-md-6 mb-3">
-                <input
+                    <input
                     type="number"
                     class="form-control is-valid"
                     id="stock"
@@ -26,20 +26,19 @@
                     required/><br>
 
                     <select class="custom-select" name="producto" placeholder="relleno">
-                    <option selected value=""> -- Seleccionar Producto -- </option>
-                      @foreach ($productos as $producto)
-                        <option value="{{ $producto->id }}">{{ $producto->nombre }}</option> 
-                      @endforeach
+                      <option selected value=""> -- Seleccionar Producto -- </option>
+                        @foreach ($productos as $producto)
+                          <option value="{{ $producto->id }}">{{ $producto->nombre }}</option> 
+                        @endforeach
                     </select><br><br>
 
                     <select class="custom-select" name="sucursal" placeholder="Selecciona la sucursal">
-                    <option selected value=""> -- Sucursal -- </option>
-                    @foreach ($sucursal as $sucursal)
-                        <option value="{{ $sucursal->id }}">{{ $sucursal->nombre }}</option> 
-                      @endforeach
+                      <option selected value=""> -- Sucursal -- </option>
+                        @foreach ($sucursal as $sucursal)
+                            <option value="{{ $sucursal->id }}">{{ $sucursal->nombre }}</option> 
+                        @endforeach
                     </select><br><br>
-                
-                    
+                       
                 </div>
               </div>
            <br>

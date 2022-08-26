@@ -17,7 +17,7 @@
 
             <div class="col-8" align="right">
               <button type="button" class="btn btn-dark">login</button>
-              <a type="button" class="btn btn-info" href="/contact">Contactanos</a>
+              <a type="button" class="btn btn-dark" href="/contact">Contactanos</a>
             </div>
 
             <div class="col-12" aling="center"><br>
@@ -35,10 +35,9 @@
         <div class="col-6" align="left">
           <a class="btn btn-primary" href="{{route('products.create')}}" type="button">Agregar Producto</a>
           <a class="btn btn-success" href="{{route('products.index')}}" type="button">Vista Inventario</a>
-          <a class="btn btn-warning" href="{{route('search.index')}}" type="button">Buscar
-          </a>
         </div>
         <div class="col-6" align="right">
+          <a class="btn btn-info" href="{{route('search.index')}}" type="button">Buscar</a>
           <a class="btn btn-primary" href="{{route('stock.create')}}" type="button">Agregar Stock/Precio</a>
           <a class="btn btn-success" href="{{route('stock.index')}}" type="button">Vista Stock</a><br><br>
         </div></div>

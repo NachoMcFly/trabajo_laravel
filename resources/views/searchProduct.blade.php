@@ -28,9 +28,9 @@
       </thead>
       <tbody>
       
-          @foreach($stock as $stock)
+        @foreach($stock as $stock)
             <tr>
-              <td><img src="{{ $stock->producto()->first()->imagen }}" class="card-img-top" alt="..." style="width: 18rem;"></td>
+              <td><img src="{{ $stock->producto()->first()->imagen }}" class="card-img-top" alt="..." style="width: 17rem;"></td>
               <td>{{ $stock->producto()->first()->nombre }}</td>
               <td>{{ $stock->producto()->first()->categoria()->first()->tipo }}</td>
               <td>{{ $stock->sucursal()->first()->nombre }}</td>
