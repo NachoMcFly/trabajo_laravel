@@ -25,13 +25,11 @@
                     placeholder="Descripción del Producto"
                     required/><br>
 
-                    <input
-                    type="text"
-                    class="form-control is-valid"
-                    id="imagen"
-                    name="imagen"
-                    placeholder="URL imagen"
-                    required/><br>
+                    <div class="mb-3">
+                     <label for="formFileSm" class="form-label" > Ingrese imagen del producto</label>
+                      <input class="form-control form-control-sm" name="imagen" id="imagen" type="file">
+                    </div><br>
+                    
 
                     <select class="custom-select" name="categoria" placeholder="Selecciona la categoría">
                     <option selected value="categoria"> -- Categorias -- </option>

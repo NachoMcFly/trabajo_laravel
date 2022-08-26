@@ -48,7 +48,9 @@ class ProductController extends Controller
             'descripcion' => 'required',
             'imagen' => 'required'
         ]);
+
       
+
         $producto = new Producto();
         $producto->nombre = $request->nombre;
         $producto->descripcion = $request->descripcion;
@@ -98,6 +100,16 @@ class ProductController extends Controller
      */
     public function update(Request $request, $id)
     {
+
+        
+        if($request->hasFile('imagen'))
+        {
+        $destination_path = 'storage/app/public/images';
+        $image_name = $imagen->getClientOriginalName();
+        $path = $request->file('imagen')->storeAs($destination_path,$image_name);
+        $producto['imagen'] = $image_name;
+        }   
+
         $producto = Producto::find($id);
         $producto->nombre = $request->nombre;
         $producto->descripcion = $request->descripcion;
