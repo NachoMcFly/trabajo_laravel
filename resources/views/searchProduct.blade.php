@@ -30,7 +30,13 @@
       
         @foreach($stock as $stock)
             <tr>
-              <td><img src="{{ $stock->producto()->first()->imagen }}" class="card-img-top" alt="..." style="width: 17rem;"></td>
+              <td>
+              @if(Storage::disk('images')->has($stock->producto()->first()->imagen))
+                <img src="{{ url('miniatura/'.$stock->producto()->first()->imagen) }}" class="card-img-top" alt="...">
+              @else
+                <img src="{{ $stock->producto()->first()->imagen }}" class="card-img-top" alt="...">
+              @endif
+              </td>
               <td>{{ $stock->producto()->first()->nombre }}</td>
               <td>{{ $stock->producto()->first()->categoria()->first()->tipo }}</td>
               <td>{{ $stock->sucursal()->first()->nombre }}</td>
