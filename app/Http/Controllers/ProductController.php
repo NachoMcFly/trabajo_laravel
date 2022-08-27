@@ -135,6 +135,10 @@ class ProductController extends Controller
     public function destroy($id)
     {
         $producto = Producto::findOrFail($id);
+
+        if(\Storage::disk('images')->has($producto->imagen)){
+            \Storage::disk('images')->delete($producto->imagen);
+        }
         $producto->delete();
 
         return redirect()->route('products.index');
