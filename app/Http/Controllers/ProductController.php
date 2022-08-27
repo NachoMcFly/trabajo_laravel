@@ -106,23 +106,28 @@ class ProductController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $imagen = $request->file('imagen');
 
-        
-        if($request->hasFile('imagen'))
-        {
-            $destination_path = 'storage/app/public/images';
-            $image_name = $imagen->getClientOriginalName();
-            $path = $request->file('imagen')->storeAs($destination_path,$image_name);
-            $producto['imagen'] = $image_name;
+        if($imagen){
+            
+            $imagen_path = time()."-".$imagen->getClientOriginalName();
+            \Storage::disk('images')->put($imagen_path, \File::get($imagen));
+
+            $producto = Producto::find($id);
+            $producto->nombre = $request->nombre;
+            $producto->descripcion = $request->descripcion;
+            $producto->imagen = $imagen_path;
+            $producto->categoria_id = $request->categoria;
+            $producto->save();
+        }else{
+            $producto = Producto::find($id);
+            $producto->nombre = $request->nombre;
+            $producto->descripcion = $request->descripcion;
+            $producto->imagen = $request->imagen;
+            $producto->categoria_id = $request->categoria;
+            $producto->save();
         }   
-
-        $producto = Producto::find($id);
-        $producto->nombre = $request->nombre;
-        $producto->descripcion = $request->descripcion;
-        $producto->imagen = $request->imagen;
-        $producto->categoria_id = $request->categoria;
-        $producto->save();
-
+        
         return redirect()->route('products.index');
     }
 

@@ -28,14 +28,15 @@
                     value="{{ $producto->descripcion }}"
                     required/><br>
 
-                    <input
-                    type="text"
-                    class="form-control is-valid"
-                    id="imagen"
-                    name="imagen"
-                    placeholder="URL imagen"
-                    value="{{ $producto->imagen }}"
-                    required/><br>
+                    
+
+                    @if(Storage::disk('images')->has($producto->imagen))
+                      <div class="mb-3">
+                        <img src="{{ url('miniatura/'.$producto->imagen) }}" class="card-img-top" alt="..." style="width: 17rem;">
+                        <input type="file" class="form-control-file" name="imagen" id="imagen" accept=".png, .jpg, .jpeg">
+                      </div><br>
+                    
+                    @endif
 
                     <select class="custom-select" name="categoria" placeholder="Selecciona la categoría">
                       @foreach ($categoria as $categoria)
