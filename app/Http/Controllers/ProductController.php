@@ -108,7 +108,7 @@ class ProductController extends Controller
     {
         $imagen = $request->file('imagen');
 
-        if($imagen){
+        
             
             $imagen_path = time()."-".$imagen->getClientOriginalName();
             \Storage::disk('images')->put($imagen_path, \File::get($imagen));
@@ -119,14 +119,7 @@ class ProductController extends Controller
             $producto->imagen = $imagen_path;
             $producto->categoria_id = $request->categoria;
             $producto->save();
-        }else{
-            $producto = Producto::find($id);
-            $producto->nombre = $request->nombre;
-            $producto->descripcion = $request->descripcion;
-            $producto->imagen = $request->imagen;
-            $producto->categoria_id = $request->categoria;
-            $producto->save();
-        }   
+        
         
         return redirect()->route('products.index');
     }
