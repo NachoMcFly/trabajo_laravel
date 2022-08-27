@@ -18,7 +18,9 @@ class SearchController extends Controller
     public function index(Request $request)
     {
 
+        
 
+      
 
         $categoria = Categoria::all();
         $stock_precio = Stock::all();

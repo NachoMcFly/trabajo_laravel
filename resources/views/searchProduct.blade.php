@@ -32,9 +32,9 @@
             <tr>
               <td>
               @if(Storage::disk('images')->has($stock->producto()->first()->imagen))
-                <img src="{{ url('miniatura/'.$stock->producto()->first()->imagen) }}" class="card-img-top" alt="...">
+                <img src="{{ url('miniatura/'.$stock->producto()->first()->imagen) }}" style="width: 17rem;" class="card-img-top" alt="...">
               @else
-                <img src="{{ $stock->producto()->first()->imagen }}" class="card-img-top" alt="...">
+                <img src="{{ $stock->producto()->first()->imagen }}" style="width: 17rem;" class="card-img-top" alt="...">
               @endif
               </td>
               <td>{{ $stock->producto()->first()->nombre }}</td>
