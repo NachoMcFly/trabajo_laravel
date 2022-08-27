@@ -49,6 +49,8 @@ Route::put('/products/{id}', [ProductController::class, 'update'])->name('produc
 
 Route::delete('/products/{id}', [ProductController::class, 'destroy'])->name('products.destroy');
 
+Route::get('miniatura/{filename}', [ProductController::class, 'getImagen']);
+
 // Route::resource('products', ProductController::class);
 
 //controlador stockController

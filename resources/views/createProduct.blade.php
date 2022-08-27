@@ -4,7 +4,7 @@
 
     <div class="container">
     <h1> Agregar producto a inventario </h1>
-    <form action="{{route('products.store')}}" method="post">
+    <form action="{{route('products.store')}}" method="post" enctype="multipart/form-data">
     @csrf
         <div class="form-row">
           
@@ -26,8 +26,8 @@
                     required/><br>
 
                     <div class="mb-3">
-                     <label for="formFileSm" class="form-label" > Ingrese imagen del producto</label>
-                      <input class="form-control form-control-sm" name="imagen" id="imagen" type="file">
+                      <label for="formFileSm" class="form-label" > Ingrese imagen del producto</label>
+                      <input type="file" class="form-control-file" name="imagen" id="imagen" accept=".png, .jpg, .jpeg">
                     </div><br>
                     
 

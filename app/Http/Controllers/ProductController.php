@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use App\Http\Request\ProductRequest;
 use App\Models\Producto;
 use App\Models\Categoria;
@@ -48,13 +49,18 @@ class ProductController extends Controller
             'descripcion' => 'required',
             'imagen' => 'required'
         ]);
+        
+        $imagen = $request->file('imagen');
 
-      
+        if($imagen){
+            $imagen_path = time()."-".$imagen->getClientOriginalName();
+            \Storage::disk('images')->put($imagen_path, \File::get($imagen));
+        }
 
         $producto = new Producto();
         $producto->nombre = $request->nombre;
         $producto->descripcion = $request->descripcion;
-        $producto->imagen = $request->imagen;
+        $producto->imagen = $imagen_path;
         $producto->categoria_id = $request->categoria;
         $producto->save();
 
@@ -104,10 +110,10 @@ class ProductController extends Controller
         
         if($request->hasFile('imagen'))
         {
-        $destination_path = 'storage/app/public/images';
-        $image_name = $imagen->getClientOriginalName();
-        $path = $request->file('imagen')->storeAs($destination_path,$image_name);
-        $producto['imagen'] = $image_name;
+            $destination_path = 'storage/app/public/images';
+            $image_name = $imagen->getClientOriginalName();
+            $path = $request->file('imagen')->storeAs($destination_path,$image_name);
+            $producto['imagen'] = $image_name;
         }   
 
         $producto = Producto::find($id);
@@ -128,13 +134,17 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-       
         $producto = Producto::findOrFail($id);
         $producto->delete();
 
-
         return redirect()->route('products.index');
-           
-
     }
+
+    public function getImagen($filename)
+    {
+        $file = \Storage::disk('images')->get($filename);
+
+        return new Response($file, 200);
+    }
+
 }
