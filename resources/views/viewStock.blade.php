@@ -33,7 +33,7 @@
                     @csrf
                   <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
                 </form>
-            </div>               
+            </div><br>               
         </div><br>
       </div>            
     </div>    
